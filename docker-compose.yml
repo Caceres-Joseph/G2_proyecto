@@ -27,6 +27,8 @@ services:
       - MARIADB_USER=bn_suitecrm
       - MARIADB_DATABASE=bitnami_suitecrm
       - ALLOW_EMPTY_PASSWORD=yes
+      - SUITECRM_USERNAME=user
+      - SUITECRM_PASSWORD=bitnami
     volumes:
       - 'mariadb_data:/bitnami'
   suitecrm:
