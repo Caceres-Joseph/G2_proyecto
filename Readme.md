@@ -13,6 +13,6 @@
 
 
 ## ERP Odoo
-![Diagram](Odoo/Captura.png)
-![Diagram](Odoo/Captura2.png)
-![Diagram](Odoo/Captura3.png)
+![Diagram](Odoo/Captura.PNG)
+![Diagram](Odoo/Captura2.PNG)
+![Diagram](Odoo/Captura3.PNG)
