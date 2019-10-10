@@ -6,8 +6,8 @@
 
 
 ## CRM Suite snapshoots 
-![Diagram](CRM/Captura.png)
-![Diagram](CRM/Captura2.png)
+![Diagram](CRM/Captura.PNG)
+![Diagram](CRM/Captura2.PNG)
 
 
 
