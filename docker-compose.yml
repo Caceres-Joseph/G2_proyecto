@@ -11,14 +11,23 @@ services:
     - HOST=mydb
     - USER=odoo
     - PASSWORD=myodoo
-    
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+#      - ./config:/etc/odoo
+#      - ./addons:/mnt/extra-addons
+
+
   mydb:
-    image: 'bitnami/mariadb:10.3'
+    image: postgres:10
     environment:
-      - MARIADB_USER=odoo
-      - MYSQL_ROOT_PASSWORD = myodoo
-      - MARIADB_DATABASE=postgres
-      - ALLOW_EMPTY_PASSWORD=yes
-      - SUITECRM_USERNAME=user
-      - SUITECRM_PASSWORD=bitnami 
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata      
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
+volumes:
+  odoo-web-data:
+  odoo-db-data:
  
