@@ -2,7 +2,7 @@ version: '2'
 services:
 #ERP
   web:
-    image: odoo:11.0
+    image: odoo:10.0
     depends_on:
       - mydb
     ports:
