@@ -11,18 +11,14 @@ services:
     - HOST=mydb
     - USER=odoo
     - PASSWORD=myodoo
+    
   mydb:
-    image: postgres:10
+    image: 'bitnami/mariadb:10.3'
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=myodoo
-      - POSTGRES_USER=odoo
-    volumes:
-      - my-datavolume:/var/lib/postgresql
-  
-volumes:
-#ERP
-  my-datavolume:
-    driver: local
-
+      - MARIADB_USER=odoo
+      - MYSQL_ROOT_PASSWORD = myodoo
+      - MARIADB_DATABASE=postgres
+      - ALLOW_EMPTY_PASSWORD=yes
+      - SUITECRM_USERNAME=user
+      - SUITECRM_PASSWORD=bitnami 
  
