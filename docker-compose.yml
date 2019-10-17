@@ -16,10 +16,10 @@ services:
     - POSTGRES_DB=postgres
     volumes:
       - odoo-web-data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
 #    volumes:
 #      - odoo-web-data:/var/lib/odoo
 #      - ./config:/etc/odoo
-#      - ./addons:/mnt/extra-addons
 
 
   mydb:
