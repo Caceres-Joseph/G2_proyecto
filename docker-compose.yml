@@ -14,9 +14,9 @@ services:
     - POSTGRES_USER=odoo
     - POSTGRES_PASSWORD=myodoo
     - POSTGRES_DB=postgres
-    volumes:
-      - odoo-web-data:/var/lib/odoo
-      - ./addons:/mnt/extra-addons
+#    volumes:
+#      - odoo-web-data:/var/lib/odoo
+#      - ./addons:/mnt/extra-addons
 #    volumes:
 #      - odoo-web-data:/var/lib/odoo
 #      - ./config:/etc/odoo
@@ -29,8 +29,8 @@ services:
       - POSTGRES_PASSWORD=myodoo
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata 
-    volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
+#    volumes:
+#      - odoo-db-data:/var/lib/postgresql/data/pgdata
 
       
 volumes:
