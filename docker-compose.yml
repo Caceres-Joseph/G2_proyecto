@@ -2,7 +2,7 @@ version: '2'
 services:
 #ERP
   web:
-    image: odoo:12.0
+    build: ./Dockerfile/
     depends_on:
       - mydb
     ports:
