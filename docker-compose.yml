@@ -13,7 +13,7 @@ services:
     ports:
       - '80:8069'
       - '8072:8071'
-    volumes:
+#    volumes:
 #      - 'odoo_data:/bitnami'
 #      -  ./addons:/bitnami/odoo/addons
 #      - ./bitnami/odoo/addons:/bitnami/odoo/addons
