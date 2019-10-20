@@ -1,0 +1,38 @@
+version: '2'
+services:
+#ERP
+  web:
+    image: odoo:11.0
+    depends_on:
+      - mydb
+    ports:
+      - "80:8069"
+    environment:
+    - HOST=mydb
+    - USER=odoo
+    - PASSWORD=myodoo
+    - POSTGRES_USER=odoo
+    - POSTGRES_PASSWORD=myodoo
+    - POSTGRES_DB=postgres
+#    volumes:
+#      - odoo-web-data:/var/lib/odoo
+#      - ./addons:/mnt/extra-addons
+#    volumes:
+#      - odoo-web-data:/var/lib/odoo
+#      - ./config:/etc/odoo
+
+
+  mydb:
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata 
+#    volumes:
+#      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
+      
+volumes:
+  odoo-web-data:
+  odoo-db-data:

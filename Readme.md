@@ -55,3 +55,6 @@ psql postgres odoo
 
 hr_employee
 hr_attendance
+
+
+result = worked_days.WORK100.number_of_days
