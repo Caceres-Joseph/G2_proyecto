@@ -6,7 +6,6 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - 'postgresql_data:/bitnami/postgresql'
-      -  addons:/bitnami/odoo/addons
   odoo:
     image: 'bitnami/odoo:13'
     ports:
@@ -14,6 +13,7 @@ services:
       - '443:8071'
     volumes:
       - 'odoo_data:/bitnami'
+      -  addons:/bitnami/odoo/addons
     depends_on:
       - postgresql
 volumes:
