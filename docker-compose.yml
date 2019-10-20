@@ -4,8 +4,8 @@ services:
     image: 'bitnami/postgresql:11'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
-    volumes:
-      - 'postgresql_data:/bitnami/postgresql'
+#    volumes:
+#      - 'postgresql_data:/bitnami/postgresql'
   odoo:
     image: 'bitnami/odoo:13'
     ports:
@@ -16,8 +16,8 @@ services:
       -  ./addons:/bitnami/odoo/addons
     depends_on:
       - postgresql
-volumes:
-  postgresql_data:
-    driver: local
+#volumes:
+#  postgresql_data:
+#    driver: local
 #  odoo_data:
 #    driver: local
