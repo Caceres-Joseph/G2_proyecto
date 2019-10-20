@@ -58,3 +58,5 @@ hr_attendance
 
 
 result = worked_days.WORK100.number_of_days
+
+cp -avr om_hr_payroll_account/ /opt/bitnami/odoo/odoo/addons/

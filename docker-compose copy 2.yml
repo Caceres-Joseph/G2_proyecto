@@ -1,5 +1,3 @@
-#docker run -P --restart=always --name odoo-9.0 --link db:db -v path-to-odoo:/opt/odoo -p 0.0.0.0:8069:8069 -p 0.0.0.0:8072:8072 -d 
-
 version: '2'
 services:
   postgresql:
@@ -9,14 +7,14 @@ services:
 #    volumes:
 #      - 'postgresql_data:/bitnami/postgresql'
   odoo:
-    image: 'jarsa/odoo:9.0'
+    image: 'bitnami/odoo:13'
     ports:
       - '80:8069'
-      - '8072:8071'
+      - '443:8071'
     volumes:
 #      - 'odoo_data:/bitnami'
 #      -  ./addons:/bitnami/odoo/addons
-#      - ./bitnami/odoo/addons:/bitnami/odoo/addons
+      - ./bitnami/odoo/addons:/bitnami/odoo/addons
     depends_on:
       - postgresql
 #volumes:
