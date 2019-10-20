@@ -13,7 +13,8 @@ services:
       - '443:8071'
     volumes:
 #      - 'odoo_data:/bitnami'
-      -  ./addons:/bitnami/odoo/addons
+#      -  ./addons:/bitnami/odoo/addons
+      - ./bitnami:/bitnami
     depends_on:
       - postgresql
 #volumes:
